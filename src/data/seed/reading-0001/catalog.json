@@ -1,0 +1,12 @@
+{
+  "sessionId": "reading-0001",
+  "sessionType": "reading",
+  "sessionNumber": 1,
+  "titleIt": "Studiare bene nell'era digitale",
+  "titleJa": "デジタル時代の学習習慣",
+  "theme": "educazione",
+  "heroIllustrationPath": "/illustrations/leggere/reading-0001.svg",
+  "isPublished": true,
+  "createdAt": "__SERVER_TIMESTAMP__",
+  "updatedAt": "__SERVER_TIMESTAMP__"
+}

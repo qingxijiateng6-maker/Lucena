@@ -1,0 +1,24 @@
+
+> italian-learning-app@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.2 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.40.240:3000
+- Environments: .env.local
+✓ Ready in 860ms
+
+ GET / 200 in 3.2s (next.js: 1828ms, application-code: 1392ms)
+ GET /api/auth/me 200 in 2.6s (next.js: 2.5s, application-code: 87ms)
+⚠ Fast Refresh had to perform a full reload when ./src/components/auth/auth-provider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+✓ Compiled in 168ms
+ GET / 200 in 684ms (next.js: 233ms, application-code: 451ms)
+ GET /api/auth/me 200 in 45ms (next.js: 12ms, application-code: 33ms)
+[auth/session] Incoming session exchange request.
+[auth/session] Session exchange completed successfully.
+ POST /api/auth/session 204 in 5.3s (next.js: 1256ms, application-code: 4.1s)
+ GET /api/auth/me 200 in 621ms (next.js: 65ms, application-code: 556ms)
+ GET /leggere 200 in 343ms (next.js: 128ms, application-code: 215ms)
+ GET /leggere 200 in 110ms (next.js: 12ms, application-code: 98ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://C:/Users/EliteBook 630 G9/Desktop/アプリ作成/Italian-Learning-App/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+ GET /api/sessions?type=reading 200 in 1117ms (next.js: 153ms, application-code: 964ms)

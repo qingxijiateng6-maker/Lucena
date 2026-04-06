@@ -1,0 +1,215 @@
+{
+  "sessionId": "listening-0001",
+  "answerKey": [
+    {
+      "questionId": "lq1",
+      "correctChoiceId": "C",
+      "shortRationaleJa": "会話全体は、在宅勤務の利点と注意点を同僚同士で話し合う内容だから。"
+    },
+    {
+      "questionId": "lq2",
+      "correctChoiceId": "A",
+      "shortRationaleJa": "Giulia は通勤の負担が減り、一日の組み立てがしやすい点をはっきり挙げているため。"
+    }
+  ],
+  "transcript": {
+    "segments": [
+      {
+        "segmentId": "listening-0001_seg0",
+        "sentenceId": "listening-0001_s0",
+        "speakerId": "sp1",
+        "speakerName": "Giulia",
+        "startSec": 0,
+        "endSec": 8,
+        "text": "Da quando il nostro ufficio ha introdotto due giorni di lavoro da remoto, arrivo a sera molto meno stanca.",
+        "translation": "うちの職場で週に二日の在宅勤務が始まってから、私は夕方になってもずっと疲れにくくなったの。",
+        "analysis": {
+          "structure": "Da quando ... で『〜して以来』。主節は arrivo a sera ...。",
+          "grammarPoints": [
+            {
+              "label": "Da quando",
+              "explanationJa": "ある時点以降の継続的な変化を表す導入表現。"
+            }
+          ],
+          "vocabNotes": [
+            {
+              "label": "da remoto",
+              "explanationJa": "『リモートで』『遠隔で』。lavoro da remoto は在宅・遠隔勤務の総称。"
+            }
+          ]
+        }
+      },
+      {
+        "segmentId": "listening-0001_seg1",
+        "sentenceId": "listening-0001_s1",
+        "speakerId": "sp2",
+        "speakerName": "Marco",
+        "startSec": 8,
+        "endSec": 18,
+        "text": "Io invece all'inizio ero scettico, perché temevo di perdere il confronto diretto con il team.",
+        "translation": "僕のほうは最初かなり懐疑的だったよ。チームと直接やりとりする機会を失うのではないかと心配していたからね。",
+        "analysis": {
+          "structure": "ero scettico が主節、perché temevo ... が理由節。",
+          "grammarPoints": [
+            {
+              "label": "temere di + infinito",
+              "explanationJa": "『〜するのではないかと心配する』。不安の理由を自然に続けられる。"
+            }
+          ],
+          "vocabNotes": [
+            {
+              "label": "scettico",
+              "explanationJa": "『懐疑的な』。新しい制度にすぐ賛成しない態度を表す。"
+            }
+          ]
+        }
+      },
+      {
+        "segmentId": "listening-0001_seg2",
+        "sentenceId": "listening-0001_s2",
+        "speakerId": "sp1",
+        "speakerName": "Giulia",
+        "startSec": 18,
+        "endSec": 28,
+        "text": "Capisco, ma per me il vantaggio più grande è evitare un'ora di treno ogni mattina.",
+        "translation": "わかるわ。でも私にとって一番大きい利点は、毎朝一時間の電車通勤を避けられることなの。",
+        "analysis": {
+          "structure": "il vantaggio più grande è ... の名詞述語文。evitare が内容を示す不定詞。",
+          "grammarPoints": [
+            {
+              "label": "per me",
+              "explanationJa": "『私にとっては』と個人の視点を明示する表現。"
+            }
+          ],
+          "vocabNotes": [
+            {
+              "label": "vantaggio",
+              "explanationJa": "利点、メリット。対義語は svantaggio。"
+            }
+          ]
+        }
+      },
+      {
+        "segmentId": "listening-0001_seg3",
+        "sentenceId": "listening-0001_s3",
+        "speakerId": "sp2",
+        "speakerName": "Marco",
+        "startSec": 28,
+        "endSec": 38,
+        "text": "Su quello ti do ragione; inoltre, quando devo preparare un rapporto lungo, a casa mi concentro meglio.",
+        "translation": "それについては君の言うとおりだよ。それに、長い報告書を作る必要があるときは、家のほうが集中しやすいんだ。",
+        "analysis": {
+          "structure": "ti do ragione は慣用表現。quando devo preparare ... が条件節。",
+          "grammarPoints": [
+            {
+              "label": "dare ragione a qualcuno",
+              "explanationJa": "『〜に同意する、〜の言い分が正しいと認める』という口語表現。"
+            }
+          ],
+          "vocabNotes": [
+            {
+              "label": "rapporto",
+              "explanationJa": "ここでは仕事上の『報告書』の意味。"
+            }
+          ]
+        }
+      },
+      {
+        "segmentId": "listening-0001_seg4",
+        "sentenceId": "listening-0001_s4",
+        "speakerId": "sp1",
+        "speakerName": "Giulia",
+        "startSec": 38,
+        "endSec": 48,
+        "text": "Certo, bisogna organizzarsi bene, altrimenti le riunioni online riempiono tutto il pomeriggio.",
+        "translation": "もちろん、ちゃんと自己管理しないとだめよ。さもないとオンライン会議で午後が全部埋まってしまうから。",
+        "analysis": {
+          "structure": "bisogna organizzarsi bene が一般論、altrimenti ... が結果。",
+          "grammarPoints": [
+            {
+              "label": "altrimenti",
+              "explanationJa": "『そうでなければ』。注意や条件の結果を示す。"
+            }
+          ],
+          "vocabNotes": [
+            {
+              "label": "riempire",
+              "explanationJa": "『いっぱいにする、埋める』。予定が詰まる場面にも使う。"
+            }
+          ]
+        }
+      },
+      {
+        "segmentId": "listening-0001_seg5",
+        "sentenceId": "listening-0001_s5",
+        "speakerId": "sp2",
+        "speakerName": "Marco",
+        "startSec": 48,
+        "endSec": 60,
+        "text": "Infatti il responsabile ci ha chiesto di fissare pause precise e di venire in sede quando serve discutere decisioni complesse.",
+        "translation": "実際、上司は私たちに、休憩時間をきちんと決めることと、複雑な判断を話し合う必要があるときは出社することを求めたんだ。",
+        "analysis": {
+          "structure": "ci ha chiesto di ... e di ... の並列構文。quando serve discutere ... が条件を補う。",
+          "grammarPoints": [
+            {
+              "label": "chiedere di + infinito",
+              "explanationJa": "『〜するよう求める』。依頼や指示を表す基本構文。"
+            }
+          ],
+          "vocabNotes": [
+            {
+              "label": "in sede",
+              "explanationJa": "会社や組織の『オフィスで、現地で』を表す表現。"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "wordGlossary": [
+    {
+      "lemma": "scettico",
+      "surfaceForms": ["scettico"],
+      "pos": "aggettivo",
+      "morphology": "maschile singolare",
+      "meaningJa": "懐疑的な",
+      "collocations": [
+        { "it": "essere scettico", "ja": "懐疑的である" },
+        { "it": "atteggiamento scettico", "ja": "懐疑的な姿勢" }
+      ]
+    },
+    {
+      "lemma": "pendolarismo",
+      "surfaceForms": ["treno ogni mattina"],
+      "pos": "sostantivo",
+      "morphology": "maschile singolare",
+      "meaningJa": "通勤・通学の往復移動",
+      "collocations": [
+        { "it": "evitare il pendolarismo", "ja": "通勤負担を避ける" },
+        { "it": "tempo di pendolarismo", "ja": "通勤時間" }
+      ]
+    },
+    {
+      "lemma": "organizzarsi",
+      "surfaceForms": ["organizzarsi"],
+      "pos": "verbo pronominale",
+      "morphology": "infinito",
+      "meaningJa": "自分をうまく管理する",
+      "collocations": [
+        { "it": "organizzarsi bene", "ja": "うまく自己管理する" },
+        { "it": "organizzarsi in anticipo", "ja": "前もって段取りする" }
+      ]
+    },
+    {
+      "lemma": "responsabile",
+      "surfaceForms": ["responsabile"],
+      "pos": "sostantivo",
+      "morphology": "maschile/femminile singolare",
+      "meaningJa": "責任者、上司",
+      "collocations": [
+        { "it": "il responsabile del team", "ja": "チーム責任者" },
+        { "it": "chiedere al responsabile", "ja": "上司に確認する" }
+      ]
+    }
+  ]
+}

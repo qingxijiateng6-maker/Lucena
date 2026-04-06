@@ -1,0 +1,116 @@
+{
+  "sessionId": "reading-0001",
+  "body": {
+    "paragraphs": [
+      {
+        "paragraphIndex": 0,
+        "sentences": [
+          {
+            "sentenceId": "reading-0001_p0_s0",
+            "text": "Negli ultimi anni molte università italiane hanno integrato piattaforme digitali nelle attività quotidiane di studio."
+          },
+          {
+            "sentenceId": "reading-0001_p0_s1",
+            "text": "Gli studenti non usano più Internet soltanto per scaricare materiali, ma anche per seguire lezioni, confrontarsi in piccoli gruppi e svolgere esercizi corretti automaticamente."
+          },
+          {
+            "sentenceId": "reading-0001_p0_s2",
+            "text": "Questa trasformazione ha reso più facile accedere ai contenuti anche fuori dall'aula e in orari meno rigidi."
+          }
+        ]
+      },
+      {
+        "paragraphIndex": 1,
+        "sentences": [
+          {
+            "sentenceId": "reading-0001_p1_s0",
+            "text": "Secondo diversi ricercatori, il vantaggio principale non consiste nel sostituire del tutto l'insegnamento tradizionale, bensì nel rendere più flessibile l'organizzazione dello studio."
+          },
+          {
+            "sentenceId": "reading-0001_p1_s1",
+            "text": "Chi lavora o vive lontano dalle grandi città può rivedere i contenuti nei momenti più adatti e ripassare le parti difficili con maggiore calma."
+          },
+          {
+            "sentenceId": "reading-0001_p1_s2",
+            "text": "Tuttavia, molti docenti fanno notare che l'apprendimento online richiede una forte capacità di pianificazione personale."
+          }
+        ]
+      },
+      {
+        "paragraphIndex": 2,
+        "sentences": [
+          {
+            "sentenceId": "reading-0001_p2_s0",
+            "text": "Se uno studente non stabilisce obiettivi chiari e tempi realistici, rischia di accumulare ritardi senza accorgersene subito."
+          },
+          {
+            "sentenceId": "reading-0001_p2_s1",
+            "text": "Per questo motivo, diversi corsi combinano incontri in presenza e attività digitali, così da mantenere il contatto umano senza rinunciare ai vantaggi della tecnologia."
+          },
+          {
+            "sentenceId": "reading-0001_p2_s2",
+            "text": "In altre parole, il cambiamento più importante non riguarda soltanto gli strumenti, ma il modo in cui si costruisce un'abitudine di studio autonoma e continua."
+          }
+        ]
+      }
+    ],
+    "wordCount": 615
+  },
+  "questions": [
+    {
+      "questionId": "rq1",
+      "type": "main_idea",
+      "prompt": "Qual è l'idea principale del brano?",
+      "choices": [
+        { "choiceId": "A", "text": "Le università stanno abolendo tutte le lezioni in presenza." },
+        { "choiceId": "B", "text": "L'uso del digitale sta cambiando il modo di organizzare lo studio." },
+        { "choiceId": "C", "text": "Gli studenti italiani non vogliono più usare Internet." },
+        { "choiceId": "D", "text": "Gli insegnanti preferiscono solo la correzione automatica." }
+      ]
+    },
+    {
+      "questionId": "rq2",
+      "type": "detail",
+      "prompt": "Per che cosa gli studenti usano Internet secondo il testo?",
+      "choices": [
+        { "choiceId": "A", "text": "Solo per cercare svago e notizie." },
+        { "choiceId": "B", "text": "Per evitare del tutto il confronto con i compagni." },
+        { "choiceId": "C", "text": "Per seguire lezioni, confrontarsi e fare esercizi." },
+        { "choiceId": "D", "text": "Solo per inviare e-mail ai professori." }
+      ]
+    },
+    {
+      "questionId": "rq3",
+      "type": "detail",
+      "prompt": "Perché lo studio digitale può essere utile a chi vive lontano dalle grandi città?",
+      "choices": [
+        { "choiceId": "A", "text": "Perché elimina ogni necessità di studiare." },
+        { "choiceId": "B", "text": "Perché permette di rivedere i contenuti in momenti convenienti." },
+        { "choiceId": "C", "text": "Perché rende obbligatorie le lezioni serali." },
+        { "choiceId": "D", "text": "Perché riduce il numero di insegnanti." }
+      ]
+    },
+    {
+      "questionId": "rq4",
+      "type": "detail",
+      "prompt": "Quale difficoltà dell'apprendimento online viene sottolineata nel testo?",
+      "choices": [
+        { "choiceId": "A", "text": "La mancanza completa di contenuti disponibili." },
+        { "choiceId": "B", "text": "L'obbligo di usare libri stampati." },
+        { "choiceId": "C", "text": "La necessità di pianificare il proprio studio con costanza." },
+        { "choiceId": "D", "text": "L'impossibilità di rivedere le parti difficili." }
+      ]
+    },
+    {
+      "questionId": "rq5",
+      "type": "reference_logic",
+      "prompt": "A che cosa si riferisce l'espressione \"Per questo motivo\"?",
+      "choices": [
+        { "choiceId": "A", "text": "Al fatto che gli studenti non leggono più." },
+        { "choiceId": "B", "text": "Alla necessità di evitare qualsiasi tecnologia." },
+        { "choiceId": "C", "text": "Alla richiesta di maggiore pianificazione nello studio online." },
+        { "choiceId": "D", "text": "Alla chiusura definitiva delle università." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "sessionId": "listening-0001",
+  "audio": {
+    "audioUrl": "/audio/listening/listening-0001.wav",
+    "durationSec": 60,
+    "kind": "conversation"
+  },
+  "questions": [
+    {
+      "questionId": "lq1",
+      "type": "gist",
+      "prompt": "Di che cosa parlano principalmente i due colleghi?",
+      "choices": [
+        { "choiceId": "A", "text": "Di un viaggio di lavoro all'estero." },
+        { "choiceId": "B", "text": "Di come organizzare lo studio universitario." },
+        { "choiceId": "C", "text": "Di vantaggi e limiti del lavoro da remoto." },
+        { "choiceId": "D", "text": "Di un problema tecnico con il treno." }
+      ]
+    },
+    {
+      "questionId": "lq2",
+      "type": "speaker_intent",
+      "prompt": "Perché Giulia apprezza particolarmente il lavoro da casa?",
+      "choices": [
+        { "choiceId": "A", "text": "Perché può evitare il pendolarismo e gestire meglio la giornata." },
+        { "choiceId": "B", "text": "Perché non ha più riunioni." },
+        { "choiceId": "C", "text": "Perché il responsabile le ha ridotto l'orario." },
+        { "choiceId": "D", "text": "Perché vuole smettere di lavorare con il team." }
+      ]
+    }
+  ]
+}

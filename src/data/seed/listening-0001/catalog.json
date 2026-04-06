@@ -1,0 +1,12 @@
+{
+  "sessionId": "listening-0001",
+  "sessionType": "listening",
+  "sessionNumber": 1,
+  "titleIt": "Due colleghi parlano del lavoro da remoto",
+  "titleJa": "在宅勤務について話す同僚二人",
+  "theme": "lavoro",
+  "heroIllustrationPath": "/illustrations/ascoltare/listening-0001.svg",
+  "isPublished": true,
+  "createdAt": "__SERVER_TIMESTAMP__",
+  "updatedAt": "__SERVER_TIMESTAMP__"
+}

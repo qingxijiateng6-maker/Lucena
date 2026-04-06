@@ -1,0 +1,295 @@
+{
+  "sessionId": "reading-0001",
+  "answerKey": [
+    {
+      "questionId": "rq1",
+      "correctChoiceId": "B",
+      "shortRationaleJa": "本文全体は、デジタル活用によって学習の進め方そのものが変わっている点を中心に述べているため。"
+    },
+    {
+      "questionId": "rq2",
+      "correctChoiceId": "C",
+      "shortRationaleJa": "第1段落2文目で、授業参加・小グループでの意見交換・自動採点演習に使うと具体的に説明されているため。"
+    },
+    {
+      "questionId": "rq3",
+      "correctChoiceId": "B",
+      "shortRationaleJa": "第2段落2文目で、自分に合った時間に内容を見直せることが利点だと示されているため。"
+    },
+    {
+      "questionId": "rq4",
+      "correctChoiceId": "C",
+      "shortRationaleJa": "第2段落3文目で、オンライン学習には強い自己管理と計画性が必要だと述べられているため。"
+    },
+    {
+      "questionId": "rq5",
+      "correctChoiceId": "C",
+      "shortRationaleJa": "\"Per questo motivo\" は直前の、オンライン学習には計画性が必要だという説明を受けている。"
+    }
+  ],
+  "reviewBody": {
+    "paragraphs": [
+      {
+        "paragraphIndex": 0,
+        "sentences": [
+          {
+            "sentenceId": "reading-0001_p0_s0",
+            "text": "Negli ultimi anni molte università italiane hanno integrato piattaforme digitali nelle attività quotidiane di studio.",
+            "translation": "近年、多くのイタリアの大学が、日々の学習活動の中にデジタルプラットフォームを組み込んできた。",
+            "analysis": {
+              "structure": "主語は molte università italiane、述語は hanno integrato。nelle attività quotidiane di studio は場所・文脈を示す補足。",
+              "grammarPoints": [
+                {
+                  "label": "passato prossimo",
+                  "explanationJa": "hanno integrato は近年の変化を現在につながる出来事として述べる近過去。"
+                }
+              ],
+              "vocabNotes": [
+                {
+                  "label": "integrare",
+                  "explanationJa": "『組み込む』『統合する』。新しい要素を既存の仕組みに加えるときによく使う。"
+                }
+              ]
+            },
+            "ttsText": "Negli ultimi anni molte università italiane hanno integrato piattaforme digitali nelle attività quotidiane di studio."
+          },
+          {
+            "sentenceId": "reading-0001_p0_s1",
+            "text": "Gli studenti non usano più Internet soltanto per scaricare materiali, ma anche per seguire lezioni, confrontarsi in piccoli gruppi e svolgere esercizi corretti automaticamente.",
+            "translation": "学生たちはもはや、資料をダウンロードするためだけでなく、授業を受けたり、小グループで意見を交わしたり、自動採点される練習問題に取り組んだりするためにもインターネットを使っている。",
+            "analysis": {
+              "structure": "non ... soltanto, ma anche ... で『〜だけでなく、〜も』を表す。seguire / confrontarsi / svolgere は per に続く不定詞列。",
+              "grammarPoints": [
+                {
+                  "label": "non soltanto ... ma anche",
+                  "explanationJa": "二つ以上の役割や性質を対比しながら追加する定番表現。"
+                }
+              ],
+              "vocabNotes": [
+                {
+                  "label": "confrontarsi",
+                  "explanationJa": "ここでは『互いに意見を交わす』の意味。riflettere insieme に近い。"
+                }
+              ]
+            },
+            "ttsText": "Gli studenti non usano più Internet soltanto per scaricare materiali, ma anche per seguire lezioni, confrontarsi in piccoli gruppi e svolgere esercizi corretti automaticamente."
+          },
+          {
+            "sentenceId": "reading-0001_p0_s2",
+            "text": "Questa trasformazione ha reso più facile accedere ai contenuti anche fuori dall'aula e in orari meno rigidi.",
+            "translation": "この変化によって、教室の外でも、より縛られない時間帯でも内容にアクセスしやすくなった。",
+            "analysis": {
+              "structure": "ha reso più facile accedere ... は『〜しやすくした』。fuori dall'aula と in orari meno rigidi が二つの条件を補足する。",
+              "grammarPoints": [
+                {
+                  "label": "rendere + aggettivo + infinito",
+                  "explanationJa": "『〜することを…な状態にする』という構文。ここでは accedere が不定詞で続く。"
+                }
+              ],
+              "vocabNotes": [
+                {
+                  "label": "rigido",
+                  "explanationJa": "『硬い』だけでなく、時間や規則が『厳格な・柔軟でない』という意味でも使う。"
+                }
+              ]
+            },
+            "ttsText": "Questa trasformazione ha reso più facile accedere ai contenuti anche fuori dall'aula e in orari meno rigidi."
+          }
+        ]
+      },
+      {
+        "paragraphIndex": 1,
+        "sentences": [
+          {
+            "sentenceId": "reading-0001_p1_s0",
+            "text": "Secondo diversi ricercatori, il vantaggio principale non consiste nel sostituire del tutto l'insegnamento tradizionale, bensì nel rendere più flessibile l'organizzazione dello studio.",
+            "translation": "複数の研究者によれば、主な利点は従来の授業を完全に置き換えることではなく、学習の組み立て方をより柔軟にすることにある。",
+            "analysis": {
+              "structure": "non consiste ... bensì ... は対比構文。consistere in に二つの in 句が続き、真の要点を後半で提示する。",
+              "grammarPoints": [
+                {
+                  "label": "bensì",
+                  "explanationJa": "前半を否定したうえで『むしろ』と訂正・対比するときのやや硬めの接続語。"
+                }
+              ],
+              "vocabNotes": [
+                {
+                  "label": "flessibile",
+                  "explanationJa": "時間・制度・考え方などが『柔軟な』ことを表す。"
+                }
+              ]
+            },
+            "ttsText": "Secondo diversi ricercatori, il vantaggio principale non consiste nel sostituire del tutto l'insegnamento tradizionale, bensì nel rendere più flessibile l'organizzazione dello studio."
+          },
+          {
+            "sentenceId": "reading-0001_p1_s1",
+            "text": "Chi lavora o vive lontano dalle grandi città può rivedere i contenuti nei momenti più adatti e ripassare le parti difficili con maggiore calma.",
+            "translation": "働いている人や大都市から離れて暮らす人は、自分に合った時間に内容を見直し、難しい部分をより落ち着いて復習できる。",
+            "analysis": {
+              "structure": "Chi ... は『〜する人はだれでも』の総称主語。può に rivedere と ripassare の二つの不定詞がかかる。",
+              "grammarPoints": [
+                {
+                  "label": "Chi + verbo",
+                  "explanationJa": "特定の一人ではなく、条件に当てはまる人全般を表す。"
+                }
+              ],
+              "vocabNotes": [
+                {
+                  "label": "ripassare",
+                  "explanationJa": "学んだ内容をもう一度見直して復習すること。"
+                }
+              ]
+            },
+            "ttsText": "Chi lavora o vive lontano dalle grandi città può rivedere i contenuti nei momenti più adatti e ripassare le parti difficili con maggiore calma."
+          },
+          {
+            "sentenceId": "reading-0001_p1_s2",
+            "text": "Tuttavia, molti docenti fanno notare che l'apprendimento online richiede una forte capacità di pianificazione personale.",
+            "translation": "しかし、多くの教員は、オンライン学習には高い自己計画力が必要だと指摘している。",
+            "analysis": {
+              "structure": "fanno notare che ... は『〜と指摘する』。che 節の中で richiede が中心動詞。",
+              "grammarPoints": [
+                {
+                  "label": "fare notare che",
+                  "explanationJa": "『〜という点を気づかせる・指摘する』という表現。議論や説明文でよく使う。"
+                }
+              ],
+              "vocabNotes": [
+                {
+                  "label": "pianificazione",
+                  "explanationJa": "『計画化・計画立案』。personale がつくことで自己管理の意味が強まる。"
+                }
+              ]
+            },
+            "ttsText": "Tuttavia, molti docenti fanno notare che l'apprendimento online richiede una forte capacità di pianificazione personale."
+          }
+        ]
+      },
+      {
+        "paragraphIndex": 2,
+        "sentences": [
+          {
+            "sentenceId": "reading-0001_p2_s0",
+            "text": "Se uno studente non stabilisce obiettivi chiari e tempi realistici, rischia di accumulare ritardi senza accorgersene subito.",
+            "translation": "もし学生が明確な目標と現実的な時間設定をしなければ、気づかないうちに遅れをため込む危険がある。",
+            "analysis": {
+              "structure": "Se ... rischia di ... の条件文。senza accorgersene subito は『すぐにはそれに気づかずに』という副次情報。",
+              "grammarPoints": [
+                {
+                  "label": "rischiare di + infinito",
+                  "explanationJa": "『〜する危険がある』。望ましくない結果を予告するときに使う。"
+                }
+              ],
+              "vocabNotes": [
+                {
+                  "label": "accumulare ritardi",
+                  "explanationJa": "『遅れを積み重ねる』。勉強計画が崩れる場面で頻出。"
+                }
+              ]
+            },
+            "ttsText": "Se uno studente non stabilisce obiettivi chiari e tempi realistici, rischia di accumulare ritardi senza accorgersene subito."
+          },
+          {
+            "sentenceId": "reading-0001_p2_s1",
+            "text": "Per questo motivo, diversi corsi combinano incontri in presenza e attività digitali, così da mantenere il contatto umano senza rinunciare ai vantaggi della tecnologia.",
+            "translation": "このため、多くの講座では対面の集まりとデジタル活動を組み合わせ、人との接触を保ちながらテクノロジーの利点も手放さないようにしている。",
+            "analysis": {
+              "structure": "Per questo motivo が理由を受ける接続句。così da + infinito は目的『〜するために』を表す。",
+              "grammarPoints": [
+                {
+                  "label": "così da + infinito",
+                  "explanationJa": "結果や目的が自然につながるニュアンスの『〜するように／〜するために』。"
+                }
+              ],
+              "vocabNotes": [
+                {
+                  "label": "rinunciare a",
+                  "explanationJa": "『〜を諦める、手放す』。ここでは vantaggi にかかっている。"
+                }
+              ]
+            },
+            "ttsText": "Per questo motivo, diversi corsi combinano incontri in presenza e attività digitali, così da mantenere il contatto umano senza rinunciare ai vantaggi della tecnologia."
+          },
+          {
+            "sentenceId": "reading-0001_p2_s2",
+            "text": "In altre parole, il cambiamento più importante non riguarda soltanto gli strumenti, ma il modo in cui si costruisce un'abitudine di studio autonoma e continua.",
+            "translation": "言い換えれば、最も重要な変化は道具そのものではなく、自立的で継続的な学習習慣をどう築くかに関わっている。",
+            "analysis": {
+              "structure": "In altre parole は言い換え。il modo in cui ... は『〜するやり方』を表す関係表現。",
+              "grammarPoints": [
+                {
+                  "label": "il modo in cui",
+                  "explanationJa": "『〜する方法・あり方』を具体的に説明するときの定型表現。"
+                }
+              ],
+              "vocabNotes": [
+                {
+                  "label": "autonomo",
+                  "explanationJa": "他人任せではなく、自分で判断して進められる状態を表す。"
+                }
+              ]
+            },
+            "ttsText": "In altre parole, il cambiamento più importante non riguarda soltanto gli strumenti, ma il modo in cui si costruisce un'abitudine di studio autonoma e continua."
+          }
+        ]
+      }
+    ]
+  },
+  "wordGlossary": [
+    {
+      "lemma": "integrare",
+      "surfaceForms": ["integrato"],
+      "pos": "verbo",
+      "morphology": "participio passato",
+      "meaningJa": "組み込む、統合する",
+      "collocations": [
+        { "it": "integrare una piattaforma", "ja": "プラットフォームを組み込む" },
+        { "it": "integrare nuove pratiche", "ja": "新しい実践を取り入れる" }
+      ]
+    },
+    {
+      "lemma": "flessibile",
+      "surfaceForms": ["flessibile"],
+      "pos": "aggettivo",
+      "morphology": "forma invariabile",
+      "meaningJa": "柔軟な",
+      "collocations": [
+        { "it": "orario flessibile", "ja": "柔軟な時間割" },
+        { "it": "struttura flessibile", "ja": "柔軟な構成" }
+      ]
+    },
+    {
+      "lemma": "ripassare",
+      "surfaceForms": ["ripassare"],
+      "pos": "verbo",
+      "morphology": "infinito",
+      "meaningJa": "復習する",
+      "collocations": [
+        { "it": "ripassare una lezione", "ja": "授業を復習する" },
+        { "it": "ripassare con calma", "ja": "落ち着いて復習する" }
+      ]
+    },
+    {
+      "lemma": "pianificazione",
+      "surfaceForms": ["pianificazione"],
+      "pos": "sostantivo",
+      "morphology": "femminile singolare",
+      "meaningJa": "計画立案、計画性",
+      "collocations": [
+        { "it": "pianificazione personale", "ja": "個人の計画管理" },
+        { "it": "pianificazione dello studio", "ja": "学習計画" }
+      ]
+    },
+    {
+      "lemma": "rinunciare",
+      "surfaceForms": ["rinunciare"],
+      "pos": "verbo",
+      "morphology": "infinito",
+      "meaningJa": "諦める、手放す",
+      "collocations": [
+        { "it": "rinunciare a qualcosa", "ja": "何かを諦める" },
+        { "it": "senza rinunciare a", "ja": "〜を手放さずに" }
+      ]
+    }
+  ]
+}
