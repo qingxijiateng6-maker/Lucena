@@ -1,5 +1,3 @@
-import { promises as fs } from "node:fs";
-import path from "node:path";
 import { FieldValue } from "firebase-admin/firestore";
 import { getAdminDb, isFirebaseAdminConfigured } from "@/lib/firebase/admin";
 import {
@@ -18,13 +16,6 @@ import type {
 } from "@/types/session";
 import type { NoteDraft } from "@/types/note";
 import { sessionTypeFromSessionId } from "@/lib/utils/session";
-
-interface LocalDb {
-  users: Record<string, UserDoc>;
-  attempts: Record<string, AttemptDoc>;
-  notes: Record<string, NoteDoc>;
-  progress: Record<string, SavedProgressDoc>;
-}
 
 export interface CreateAttemptInput {
   uid: string;
@@ -80,184 +71,110 @@ function shouldFallbackToLocal(error: unknown) {
   );
 }
 
-const LOCAL_DB_PATH = path.join(process.cwd(), ".local-app-db.json");
-
-function createEmptyDb(): LocalDb {
-  return {
-    users: {},
-    attempts: {},
-    notes: {},
-    progress: {},
-  };
-}
-
-async function readLocalDb() {
-  try {
-    const raw = await fs.readFile(LOCAL_DB_PATH, "utf8");
-    return JSON.parse(raw) as LocalDb;
-  } catch {
-    return createEmptyDb();
-  }
-}
-
-async function writeLocalDb(db: LocalDb) {
-  await fs.writeFile(LOCAL_DB_PATH, JSON.stringify(db, null, 2), "utf8");
-}
-
 function progressKey(uid: string, sessionId: string) {
   return `${uid}__${sessionId}`;
 }
 
-class LocalRepository implements AppRepository {
-  async listCatalog(type: SessionType) {
+function firestoreRequiredForUserData(): never {
+  throw new Error("Firestore is required for user data operations.");
+}
+
+class FixtureRepository implements AppRepository {
+  async listCatalog(type: SessionType): Promise<SessionCatalogDoc[]> {
     return listFixtureCatalog(type);
   }
 
-  async getCatalogByNumber(type: SessionType, sessionNumber: number) {
+  async getCatalogByNumber(
+    type: SessionType,
+    sessionNumber: number,
+  ): Promise<SessionCatalogDoc | null> {
     return getFixtureCatalogByNumber(type, sessionNumber);
   }
 
-  async getLearningBySessionId(sessionId: string) {
+  async getLearningBySessionId(sessionId: string): Promise<unknown | null> {
     return getFixtureLearning(sessionId);
   }
 
-  async getReviewBySessionId(sessionId: string) {
+  async getReviewBySessionId(sessionId: string): Promise<unknown | null> {
     return getFixtureReview(sessionId);
   }
 
-  async upsertUser(user: UserDoc) {
-    const db = await readLocalDb();
-    db.users[user.uid] = user;
-    await writeLocalDb(db);
+  async upsertUser(_user: UserDoc): Promise<void> {
+    void _user;
+    return firestoreRequiredForUserData();
   }
 
-  async listLearnedSessionIds(uid: string, type: SessionType) {
-    const db = await readLocalDb();
-    return Object.values(db.attempts)
-      .filter(
-        (item) =>
-          item.uid === uid &&
-          item.sessionType === type &&
-          item.status === "completed",
-      )
-      .map((item) => item.sessionId);
+  async listLearnedSessionIds(_uid: string, _type: SessionType): Promise<string[]> {
+    void _uid;
+    void _type;
+    return firestoreRequiredForUserData();
   }
 
-  async createCompletedAttempt(input: CreateAttemptInput) {
-    const db = await readLocalDb();
-    const now = new Date().toISOString();
-    const attempt: AttemptDoc = {
-      attemptId: crypto.randomUUID(),
-      uid: input.uid,
-      sessionId: input.sessionId,
-      sessionType: input.sessionType,
-      sessionNumber: input.sessionNumber,
-      startedAt: now,
-      completedAt: now,
-      status: "completed",
-      score: input.score,
-      correctCount: input.correctCount,
-      questionCount: input.questionCount,
-      answers: input.answers,
-    };
-    db.attempts[attempt.attemptId] = attempt;
-    await writeLocalDb(db);
-    return attempt;
+  async createCompletedAttempt(_input: CreateAttemptInput): Promise<AttemptDoc> {
+    void _input;
+    return firestoreRequiredForUserData();
   }
 
-  async getAttemptById(attemptId: string) {
-    const db = await readLocalDb();
-    return db.attempts[attemptId] || null;
+  async getAttemptById(_attemptId: string): Promise<AttemptDoc | null> {
+    void _attemptId;
+    return firestoreRequiredForUserData();
   }
 
-  async listAttempts(uid: string) {
-    const db = await readLocalDb();
-    return Object.values(db.attempts)
-      .filter((item) => item.uid === uid)
-      .sort(
-        (a, b) =>
-          new Date(String(b.startedAt)).getTime() -
-          new Date(String(a.startedAt)).getTime(),
-      );
+  async listAttempts(_uid: string): Promise<AttemptDoc[]> {
+    void _uid;
+    return firestoreRequiredForUserData();
   }
 
-  async listNotes(uid: string, filters?: { sessionId?: string; tag?: string }) {
-    const db = await readLocalDb();
-    return Object.values(db.notes)
-      .filter((item) => item.uid === uid)
-      .filter((item) => (filters?.sessionId ? item.sessionId === filters.sessionId : true))
-      .filter((item) => (filters?.tag ? item.tags.includes(filters.tag) : true))
-      .sort(
-        (a, b) =>
-          new Date(String(b.updatedAt)).getTime() -
-          new Date(String(a.updatedAt)).getTime(),
-      );
+  async listNotes(
+    _uid: string,
+    _filters?: { sessionId?: string; tag?: string },
+  ): Promise<NoteDoc[]> {
+    void _uid;
+    void _filters;
+    return firestoreRequiredForUserData();
   }
 
-  async createNote(uid: string, input: NoteDraft & { sessionId: string }) {
-    const db = await readLocalDb();
-    const now = new Date().toISOString();
-    const noteId = crypto.randomUUID();
-    const note: NoteDoc = {
-      noteId,
-      uid,
-      sessionId: input.sessionId,
-      sessionType: sessionTypeFromSessionId(input.sessionId),
-      title: input.title,
-      body: input.body,
-      tags: input.tags,
-      createdAt: now,
-      updatedAt: now,
-    };
-    db.notes[noteId] = note;
-    await writeLocalDb(db);
-    return note;
+  async createNote(
+    _uid: string,
+    _input: NoteDraft & { sessionId: string },
+  ): Promise<NoteDoc> {
+    void _uid;
+    void _input;
+    return firestoreRequiredForUserData();
   }
 
-  async updateNote(uid: string, noteId: string, input: Partial<NoteDraft>) {
-    const db = await readLocalDb();
-    const existing = db.notes[noteId];
-    if (!existing || existing.uid !== uid) {
-      return null;
-    }
-
-    const updated: NoteDoc = {
-      ...existing,
-      ...input,
-      updatedAt: new Date().toISOString(),
-    };
-    db.notes[noteId] = updated;
-    await writeLocalDb(db);
-    return updated;
+  async updateNote(
+    _uid: string,
+    _noteId: string,
+    _input: Partial<NoteDraft>,
+  ): Promise<NoteDoc | null> {
+    void _uid;
+    void _noteId;
+    void _input;
+    return firestoreRequiredForUserData();
   }
 
-  async deleteNote(uid: string, noteId: string) {
-    const db = await readLocalDb();
-    const existing = db.notes[noteId];
-    if (!existing || existing.uid !== uid) {
-      return false;
-    }
-
-    delete db.notes[noteId];
-    await writeLocalDb(db);
-    return true;
+  async deleteNote(_uid: string, _noteId: string): Promise<boolean> {
+    void _uid;
+    void _noteId;
+    return firestoreRequiredForUserData();
   }
 
-  async getProgress(uid: string, sessionId: string) {
-    const db = await readLocalDb();
-    return db.progress[progressKey(uid, sessionId)] || null;
+  async getProgress(_uid: string, _sessionId: string): Promise<SavedProgressDoc | null> {
+    void _uid;
+    void _sessionId;
+    return firestoreRequiredForUserData();
   }
 
-  async putProgress(progress: SavedProgressDoc) {
-    const db = await readLocalDb();
-    db.progress[progressKey(progress.uid, progress.sessionId)] = progress;
-    await writeLocalDb(db);
+  async putProgress(_progress: SavedProgressDoc): Promise<void> {
+    void _progress;
+    return firestoreRequiredForUserData();
   }
 
-  async clearProgress(uid: string, sessionId: string) {
-    const db = await readLocalDb();
-    delete db.progress[progressKey(uid, sessionId)];
-    await writeLocalDb(db);
+  async clearProgress(_uid: string, _sessionId: string): Promise<void> {
+    void _uid;
+    void _sessionId;
+    return firestoreRequiredForUserData();
   }
 }
 
@@ -466,7 +383,7 @@ class FirestoreRepository implements AppRepository {
 }
 
 class ResilientRepository implements AppRepository {
-  private readonly local = new LocalRepository();
+  private readonly fixtures = new FixtureRepository();
 
   private readonly remote: FirestoreRepository | null;
 
@@ -474,134 +391,106 @@ class ResilientRepository implements AppRepository {
     this.remote = isFirebaseAdminConfigured() ? new FirestoreRepository() : null;
   }
 
-  private async withFallback<T>(
+  private async withContentFallback<T>(
     remoteAction: () => Promise<T>,
-    localAction: () => Promise<T>,
+    fixtureAction: () => Promise<T>,
   ) {
     if (!this.remote) {
-      return localAction();
+      return fixtureAction();
     }
 
     try {
       return await remoteAction();
     } catch (error) {
       if (shouldFallbackToLocal(error)) {
-        return localAction();
+        return fixtureAction();
       }
       throw error;
     }
   }
 
+  private requireRemote() {
+    if (!this.remote) {
+      throw new Error("Firestore is required for user data operations.");
+    }
+
+    return this.remote;
+  }
+
   async listCatalog(type: SessionType) {
-    return this.withFallback(
+    return this.withContentFallback(
       () => this.remote!.listCatalog(type),
-      () => this.local.listCatalog(type),
+      () => this.fixtures.listCatalog(type),
     );
   }
 
   async getCatalogByNumber(type: SessionType, sessionNumber: number) {
-    return this.withFallback(
+    return this.withContentFallback(
       () => this.remote!.getCatalogByNumber(type, sessionNumber),
-      () => this.local.getCatalogByNumber(type, sessionNumber),
+      () => this.fixtures.getCatalogByNumber(type, sessionNumber),
     );
   }
 
   async getLearningBySessionId(sessionId: string) {
-    return this.withFallback(
+    return this.withContentFallback(
       () => this.remote!.getLearningBySessionId(sessionId),
-      () => this.local.getLearningBySessionId(sessionId),
+      () => this.fixtures.getLearningBySessionId(sessionId),
     );
   }
 
   async getReviewBySessionId(sessionId: string) {
-    return this.withFallback(
+    return this.withContentFallback(
       () => this.remote!.getReviewBySessionId(sessionId),
-      () => this.local.getReviewBySessionId(sessionId),
+      () => this.fixtures.getReviewBySessionId(sessionId),
     );
   }
 
   async upsertUser(user: UserDoc) {
-    return this.withFallback(
-      () => this.remote!.upsertUser(user),
-      () => this.local.upsertUser(user),
-    );
+    return this.requireRemote().upsertUser(user);
   }
 
   async listLearnedSessionIds(uid: string, type: SessionType) {
-    return this.withFallback(
-      () => this.remote!.listLearnedSessionIds(uid, type),
-      () => this.local.listLearnedSessionIds(uid, type),
-    );
+    return this.requireRemote().listLearnedSessionIds(uid, type);
   }
 
   async createCompletedAttempt(input: CreateAttemptInput) {
-    return this.withFallback(
-      () => this.remote!.createCompletedAttempt(input),
-      () => this.local.createCompletedAttempt(input),
-    );
+    return this.requireRemote().createCompletedAttempt(input);
   }
 
   async getAttemptById(attemptId: string) {
-    return this.withFallback(
-      () => this.remote!.getAttemptById(attemptId),
-      () => this.local.getAttemptById(attemptId),
-    );
+    return this.requireRemote().getAttemptById(attemptId);
   }
 
   async listAttempts(uid: string) {
-    return this.withFallback(
-      () => this.remote!.listAttempts(uid),
-      () => this.local.listAttempts(uid),
-    );
+    return this.requireRemote().listAttempts(uid);
   }
 
   async listNotes(uid: string, filters?: { sessionId?: string; tag?: string }) {
-    return this.withFallback(
-      () => this.remote!.listNotes(uid, filters),
-      () => this.local.listNotes(uid, filters),
-    );
+    return this.requireRemote().listNotes(uid, filters);
   }
 
   async createNote(uid: string, input: NoteDraft & { sessionId: string }) {
-    return this.withFallback(
-      () => this.remote!.createNote(uid, input),
-      () => this.local.createNote(uid, input),
-    );
+    return this.requireRemote().createNote(uid, input);
   }
 
   async updateNote(uid: string, noteId: string, input: Partial<NoteDraft>) {
-    return this.withFallback(
-      () => this.remote!.updateNote(uid, noteId, input),
-      () => this.local.updateNote(uid, noteId, input),
-    );
+    return this.requireRemote().updateNote(uid, noteId, input);
   }
 
   async deleteNote(uid: string, noteId: string) {
-    return this.withFallback(
-      () => this.remote!.deleteNote(uid, noteId),
-      () => this.local.deleteNote(uid, noteId),
-    );
+    return this.requireRemote().deleteNote(uid, noteId);
   }
 
   async getProgress(uid: string, sessionId: string) {
-    return this.withFallback(
-      () => this.remote!.getProgress(uid, sessionId),
-      () => this.local.getProgress(uid, sessionId),
-    );
+    return this.requireRemote().getProgress(uid, sessionId);
   }
 
   async putProgress(progress: SavedProgressDoc) {
-    return this.withFallback(
-      () => this.remote!.putProgress(progress),
-      () => this.local.putProgress(progress),
-    );
+    return this.requireRemote().putProgress(progress);
   }
 
   async clearProgress(uid: string, sessionId: string) {
-    return this.withFallback(
-      () => this.remote!.clearProgress(uid, sessionId),
-      () => this.local.clearProgress(uid, sessionId),
-    );
+    return this.requireRemote().clearProgress(uid, sessionId);
   }
 }
 
